@@ -1,25 +1,30 @@
 pipeline {
     agent any
- 
+
+    tools {
+        // Specify the Docker installation defined in Global Tool Configuration
+        docker 'Docker'
+    }
+
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
- 
+
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('naveendra/react-blog', '-f dockerfile .')
+                    def customImage = docker.build('naveendra/react-blog', '-f dockerfile .')
                 }
             }
         }
- 
+
         stage('Run Container') {
             steps {
                 script {
-                    docker.image('naveendra/react-blog').run('-p 3000:3000')
+                    def customContainer = docker.image('naveendra/react-blog').run('-p 3000:3000')
                 }
             }
         }
