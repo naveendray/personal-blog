@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Jenkins set up
+
+execute following command to get jenkins up and running with a persistance volume
+docker run -p 8080:8080 -p 50000:50000 -v dock-vol:/var/jenkins_home jenkins/jenkins:lts
