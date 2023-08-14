@@ -74,5 +74,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 execute following command to get jenkins up and running with a persistance volume
 docker run -p 8080:8080 -p 50000:50000 -v dock-vol:/var/jenkins_home jenkins/jenkins:lts
-docker run -d -p 8080:8080 -p 50000:50000 -v dock-vol:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
+docker run -d -p 8080:8080 -p 50000:50000 -v dock-vol:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock naveendra/jenkins-custom
+
+docker run -d -p 8080:8080 -p 50000:50000 -v dock-vol:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock my-custom-jenkins
+
+docker run -p 8080:8080 -p 50000:50000 -v dock-vol:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
 
