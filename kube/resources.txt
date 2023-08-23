@@ -1,0 +1,5 @@
+// instructions to install promtheus and grafana
+https://brain2life.hashnode.dev/prometheus-and-grafana-setup-in-minikube
+
+//prometheus data source for grafana
+http://prometheus-server:80

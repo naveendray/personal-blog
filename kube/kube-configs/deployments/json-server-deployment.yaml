@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: json-server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: json-server
+  template:
+    metadata:
+      labels:
+        app: json-server
+    spec:
+      containers:
+        - name: json-server
+          image: naveendra/json-server:v1
+          resources:
+            requests:
+              memory: "256Mi"   # Memory request for the container
+              cpu: "0.5"         # CPU request for the container (0.5 CPU cores)
+            limits:
+              memory: "512Mi"   # Memory limit for the container
+              cpu: "1"           # CPU limit for the container (1 CPU core)
+          ports:
+            - containerPort: 8000
