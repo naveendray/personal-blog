@@ -17,10 +17,18 @@ spec:
           image: naveendra/json-server:v1
           resources:
             requests:
-              memory: "256Mi"   # Memory request for the container
-              cpu: "0.5"         # CPU request for the container (0.5 CPU cores)
+              memory: "256Mi"
+              cpu: "0.5"
             limits:
-              memory: "512Mi"   # Memory limit for the container
-              cpu: "1"           # CPU limit for the container (1 CPU core)
+              memory: "512Mi"
+              cpu: "1"
           ports:
             - containerPort: 8000
+          volumeMounts:
+            - name: json-data-volume
+              mountPath: /app/data   # Mount path inside the container
+      volumes:
+        - name: json-data-volume
+          persistentVolumeClaim:
+            claimName: json-server-pvc
+

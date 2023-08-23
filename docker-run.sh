@@ -9,7 +9,7 @@ CONTAINER_IDS=$(docker ps -q)
 #     docker rm $CONTAINER_ID
 # done
 
-docker push naveendra/react-blog:latest
+docker push naveendra/react-blog:v2
 # docker run -d -p 80:80 naveendra/react-blog:latest
 
 URL="http://localhost:80"

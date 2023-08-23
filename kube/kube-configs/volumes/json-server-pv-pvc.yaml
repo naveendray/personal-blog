@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: json-server-pv
+spec:
+  capacity:
+    storage: 1Gi   # Adjust storage size as needed
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /Users/yasitha/Documents/React/personal-blog/data/json-server-volume   # Replace with the host path where you want to store the data
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: json-server-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi   # Match the storage size specified in the PV
