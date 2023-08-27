@@ -1,4 +1,4 @@
-docker build -t naveendra/react-blog:latest .
+docker build -t naveendra/react-blog:v2 .
 
 # Get a list of all running container IDs
 CONTAINER_IDS=$(docker ps -q)
