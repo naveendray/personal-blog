@@ -1,0 +1,21 @@
+version: "3"
+services:
+  json-server:
+    image: node:14
+    working_dir: /app
+    volumes:
+      - ./data:/app/data
+    command: ["npx", "json-server", "--watch", "data/db.json", "--port", "8000", "--host", "0.0.0.0"]
+    ports:
+      - "8000:8000"
+
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile # Use the Dockerfile in the same directory
+    ports:
+      - "80:80"
+    environment:
+      - REACT_APP_JSON_SERVER_URL=http://json-server:8000 # URL to access the JSON server
+    depends_on:
+      - json-server
