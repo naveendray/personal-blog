@@ -1,6 +1,6 @@
 const BlogList = (props) => {
 
-    const blogs = props.blogs;
+    const blogs = props.data;
     const title = props.title;
 
     return (
