@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import Navbar from './Navbar';
 import Home from './Home';
 import Create from './Create';
+import Test from './Test';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/create">
             <Create />
+          </Route>
+          <Route path="/test">
+            <Test />
           </Route>
         </Switch>
       </div>
