@@ -1,70 +1,64 @@
 {
   "blogs": [
     {
-      "title": "My new websitesssss",
-      "body": "I am excited to launch my new website and showcase my work to the world.",
-      "author": "mario",
-      "id": 1
+      "title": "Understanding Microservices Architecture",
+      "body": "Microservices architecture is a software design approach where a single application is composed of many small services that communicate over the network. Each service is designed around a specific business function and can be developed, deployed, and scaled independently...",
+      "author": "Alice Johnson",
+      "id": 12
     },
     {
-      "title": "Welcome party!",
-      "body": "Join us for a warm welcome party to celebrate the launch of our community.",
-      "author": "yoshi",
-      "id": 2
+      "title": "Comparing NoSQL and SQL Databases",
+      "body": "When it comes to choosing a database for your application, you might find yourself deciding between NoSQL and SQL databases. NoSQL databases, like MongoDB and Cassandra, offer flexibility and scalability, while SQL databases, such as MySQL and PostgreSQL, provide strong consistency and structured data...",
+      "author": "Bob Smith",
+      "id": 13
     },
     {
-      "title": "Web dev top tips",
-      "body": "Learn some of the best tips and tricks for becoming a successful web developer.",
-      "author": "mario",
-      "id": 3
+      "title": "Getting Started with AWS Cloud Services",
+      "body": "Amazon Web Services (AWS) is a comprehensive cloud computing platform that offers a wide range of services to help you build and deploy applications at scale. Whether you need computing power, storage, databases, or machine learning capabilities, AWS has you covered...",
+      "author": "Charlie Brown",
+      "id": 14
     },
     {
-      "title": "React Hooks Work shop",
-      "body": "Explore the power of React Hooks and how they can simplify your component logic.",
-      "author": "luigi",
-      "id": 4
+      "title": "Exploring the EFK Stack for Log Management",
+      "body": "The EFK stack, consisting of Elasticsearch, Fluentd, and Kibana, provides a robust solution for log management and analysis. Elasticsearch serves as the search and analytics engine, Fluentd collects and forwards logs, and Kibana offers a user-friendly interface for visualizing data...",
+      "author": "David Williams",
+      "id": 15
     },
     {
-      "title": "JavaScript Basics",
-      "body": "Master the fundamentals of JavaScript programming and build interactive web applications.",
-      "author": "peach",
-      "id": 5
+      "title": "Docker and Containerization: A Deep Dive",
+      "body": "Docker is a platform for developing, shipping, and running applications inside containers. Containers allow you to package an application and its dependencies into a single unit that can be easily moved between environments. With Docker, you can ensure consistency and eliminate the dreaded 'works on my machine' issue...",
+      "author": "Eva Martinez",
+      "id": 16
     },
     {
-      "title": "CSS Styling Tricks",
-      "body": "Discover creative CSS styling techniques to make your websites visually appealing.",
-      "author": "bowser",
-      "id": 6
+      "title": "Scaling Applications with Kubernetes",
+      "body": "Kubernetes, often referred to as K8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. With Kubernetes, you can declaratively manage the desired state of your application and let the platform handle the underlying infrastructure...",
+      "author": "Frank Johnson",
+      "id": 17
     },
     {
-      "title": "Node.js Fundamentals",
-      "body": "Dive into Node.js and learn how to build server-side applications with JavaScript.",
-      "author": "toad",
-      "id": 7
+      "title": "Serverless Computing with AWS Lambda",
+      "body": "Serverless computing allows you to build and run applications without managing the infrastructure. AWS Lambda, a serverless compute service from Amazon Web Services, enables you to execute code in response to events without provisioning or managing servers...",
+      "author": "Grace Lee",
+      "id": 18
     },
     {
-      "title": "HTML5 Features",
-      "body": "Explore the latest features of HTML5 and how they enhance web development.",
-      "author": "luigi",
-      "id": 8
+      "title": "Exploring NoSQL Database Types",
+      "body": "NoSQL databases come in various types, each optimized for specific use cases. Document databases like MongoDB store data in flexible, JSON-like documents, while key-value stores like Redis offer high-speed data retrieval. Graph databases like Neo4j focus on relationships between data...",
+      "author": "Henry Davis",
+      "id": 19
     },
     {
-      "title": "Python Programming",
-      "body": "Embark on a journey to learn Python programming and its applications.",
-      "author": "yoshi",
-      "id": 9
+      "title": "Data Pipelines with Apache Kafka",
+      "body": "Apache Kafka is a distributed streaming platform that enables you to build real-time data pipelines and applications. It provides a publish-subscribe model for handling streams of records, allowing data to be processed, transformed, and delivered to different systems in a reliable and fault-tolerant manner...",
+      "author": "Isabella Martinez",
+      "id": 20
     },
     {
-      "title": "Database Design",
-      "body": "Get insights into database design principles for building efficient and scalable systems.",
-      "author": "mario",
-      "id": 10
-    },
-    {
-      "title": "Web dev top tips",
-      "body": "Learn some of the best tips and tricks for becoming a successful web developer.",
-      "author": "mario",
-      "id": 11
+      "title": "Machine Learning on the Cloud with Google Cloud AI",
+      "body": "Google Cloud AI offers a suite of machine learning tools and services that empower developers to build, train, and deploy AI models at scale. From image and speech recognition to natural language processing, Google Cloud AI provides pre-trained models and APIs that can be integrated into various applications...",
+      "author": "Jack Wilson",
+      "id": 21
     }
   ]
 }
