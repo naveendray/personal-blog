@@ -103,6 +103,7 @@
 }
 
 .not-found p{
-  color: lightblue;
-  text-decoration-color: red;
+  color: lightsalmon;
+  text-decoration: underline;
+  text-decoration-color: blue;
 }
