@@ -17,7 +17,7 @@ const Authors = () => {
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify({"name": author})
         }).then(() => {
-
+            window.location.reload();
         }).catch((e) => {
             console.log(e)
         })
