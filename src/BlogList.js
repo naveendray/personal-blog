@@ -5,6 +5,10 @@ const BlogList = (props) => {
     const blogs = props.data;
     const title = props.title;
 
+    // console.log(blogs);
+    // console.log(title);
+    // console.log("test test test");
+
     return (
         <div className="blog-list">
             <h2>{ title }</h2>

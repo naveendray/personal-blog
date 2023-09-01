@@ -5,13 +5,9 @@ import Create from './Create';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
-import Writers from './Writers';
+import Authors from './Authors';
 
 function App() {
-
-  const title = 'Welcome to the new blog';
-  const likes = 50;
-  const link = "https://www.google.com"
 
   return (
     <Router>
@@ -28,8 +24,8 @@ function App() {
           <Route exact path="/blogs/:id">
             <BlogDetails />
           </Route>
-          <Route path="/writers">
-            <Writers />
+          <Route path="/authors">
+            <Authors />
           </Route>
           <Route path="/*">
             <NotFound />
