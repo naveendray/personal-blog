@@ -73,3 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## json server configuration
 
 npx json-server --watch data/db.json --port 8000
+
+### original github link tht was in the tutorial
+
+https://github.com/iamshaunjp/Complete-React-Tutorial/tree/lesson-32/dojo-blog
