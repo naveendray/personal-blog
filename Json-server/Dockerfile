@@ -8,7 +8,7 @@ WORKDIR /app
 RUN npm install -g json-server
 
 # Copy the db.json file into the container
-COPY ./data/db.json ./data/db.json
+COPY ./data/db.json /app/data/db.json
 
 # Expose the port for json-server
 EXPOSE 8000
