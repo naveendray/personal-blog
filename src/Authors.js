@@ -17,7 +17,8 @@ const Authors = () => {
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify({"name": author})
         }).then(() => {
-            window.location.reload();
+            setAuthor('');
+            history.push('/create')
         }).catch((e) => {
             console.log(e)
         })
