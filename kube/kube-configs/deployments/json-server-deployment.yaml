@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: json-server
-          image: naveendra/json-server:v1
+          image: naveendra/json-server:v5
           resources:
             requests:
               memory: "256Mi"
@@ -24,11 +24,4 @@ spec:
               cpu: "1"
           ports:
             - containerPort: 8000
-          volumeMounts:
-            - name: json-data-volume
-              mountPath: /app/data   # Mount path inside the container
-      volumes:
-        - name: json-data-volume
-          persistentVolumeClaim:
-            claimName: json-server-pvc
 
