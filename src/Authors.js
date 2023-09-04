@@ -1,48 +1,77 @@
-import useFetch from "./useFetch";
-import { useState } from "react";
-import AuthorsList from "./AuthorsList";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const Authors = () => {
 
-    const {data,isPending,error} = useFetch("http://localhost:8000/authors");
-    const [author, setAuthor] = useState('');
+    const [authors, setAuthors] = useState([]);
     const history = useHistory();
+
+    useEffect(() => {
+        fetch("http://localhost:8000/authors")
+            .then((response) => response.json())
+            .then((data) => {
+                setAuthors(data);
+            });
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('clicked')
-        fetch('http://localhost:8000/authors',{
-            method: "POST",
-            headers: {"Content-Type" : "application/json"},
-            body: JSON.stringify({"name": author})
-        }).then(() => {
-            setAuthor('');
-            history.push('/create')
-        }).catch((e) => {
-            console.log(e)
-        })
-    }
+        const author = {
+            name: e.target.elements.authorName.value,
+        };
 
-    return ( 
+        const nextId = Math.max(...authors.map((author) => author.id)) + 1;
+        author.id = nextId;
+
+        fetch("http://localhost:8000/authors", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(author),
+        })
+            .then(() => {
+                setAuthors([...authors, author]);
+                e.target.elements.authorName.value = '';
+            })
+            .catch((e) => {
+                console.log(e);
+            });
+    };
+
+    const handleDelete = (id) => {
+        fetch("http://localhost:8000/authors/" + id, {
+            method: "DELETE",
+        })
+            .then(() => {
+                setAuthors(authors.filter((author) => author.id !== id));
+            })
+            .catch((e) => {
+                console.log(e);
+            });
+    };
+    
+
+    return (
         <div className="create">
+            <h1>Authors</h1>
 
             <form onSubmit={handleSubmit}>
-                <label>Author's Name:</label>
-                <input 
-                    type="text" 
-                    required
-                    value={author}
-                    onChange={(e) => setAuthor(e.target.value)}
-                />
-                <button>Save Author</button>
+                <label>Author Name:</label>
+                <input type="text" name="authorName" />
+                <button>Add Author</button>
             </form>
 
-            {error && <div>{ error }</div>}
-            {isPending && <div>Loading . . .</div>}
-            {data && <AuthorsList data={data} title="Authors list"/>}
+            <ul>
+                {authors.map((author) => (
+                    <li key={author.id}>
+                        {author.name+" "}
+                        <button onClick={() => handleDelete(author.id)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+        
         </div>
-     );
-}
- 
+    );
+};
+
 export default Authors;
