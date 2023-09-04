@@ -17,7 +17,7 @@ spec:
           image: naveendra/json-server:v5
           resources:
             requests:
-              memory: "256Mi"
+              memory: "180Mi"
               cpu: "0.5"
             limits:
               memory: "512Mi"
