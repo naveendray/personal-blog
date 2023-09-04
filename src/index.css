@@ -107,3 +107,43 @@
   text-decoration: underline;
   text-decoration-color: blue;
 }
+
+/* style forms related elements */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: lightgoldenrodyellow;
+}
+
+li:hover {
+  background-color: lightgray;
+}
+
+.author-name {
+  font-size: 20px;
+}
+
+form {
+  margin-bottom: 10px;
+  border-width: 3px;
+  border-color: #f1356d;
+  border-style: double;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: lightslategrey;
+}
+
+button {
+  align-self: auto;
+  margin: 10px;
+  padding: 20px;
+}
