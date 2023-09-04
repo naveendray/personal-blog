@@ -1,5 +1,5 @@
 
-docker build -t naveendra/react-blog:v3 .
+docker build -t naveendra/react-blog:v4 .
 
 # Get a list of all running container IDs
 CONTAINER_IDS=$(docker ps -q)
@@ -11,7 +11,7 @@ CONTAINER_IDS=$(docker ps -q)
 # done
 
 
-docker push naveendra/react-blog:v3
+docker push naveendra/react-blog:v4
 # docker run -d -p 80:80 naveendra/react-blog:latest
 
 URL="http://localhost:80"
