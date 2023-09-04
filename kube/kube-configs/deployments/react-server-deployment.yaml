@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
         - name: react-server
-          image: naveendra/react-blog:v3
+          image: naveendra/react-blog:v4
           resources:
             requests:
-              memory: "256Mi"   # Memory request for the container
+              memory: "180Mi"   # Memory request for the container
               cpu: "0.5"         # CPU request for the container (0.5 CPU cores)
             limits:
               memory: "512Mi"   # Memory limit for the container
